@@ -11,6 +11,17 @@
   </head>
 
   <body>
+    <header>
+      <div class="header_container">
+        <%= link_to "スケジュール管理アプリ", "/posts" %>
+      </div>
+    </header>
     <%= yield %>
+    <footer>
+      <div class="footer_container">
+        <p class="footer_day">現在の日付：<%= Date.current.strftime('%Y年 %m月 %d日') %></p>
+        <p class="footer_schedule_number">スケジュール数：<%= @posts.count %></p>
+      </div>
+    </footer>
   </body>
 </html>
